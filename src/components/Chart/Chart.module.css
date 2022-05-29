@@ -1,0 +1,14 @@
+.chartContainer {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .chartContainer {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .chartContainer {
+    width: 1020px;
+  }
+}
