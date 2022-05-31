@@ -27,7 +27,7 @@ import {
   Tooltip,
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
-import colorsDiagram from '../colorsDiagram';
+import colorsDiagram from '../../utils/colorsDiagram';
 import s from './Chart.module.css';
 
 ChartJS.register(
@@ -83,7 +83,6 @@ export default function ChartStatistic({ labels, values, type }) {
     <div className={s.chartContainer}>
       <Chart options={options} data={data} />
     </div>
-    // <Chart options={options} data={data} />
   );
 }
 

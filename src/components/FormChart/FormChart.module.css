@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   text-align: start;
-  border: solid 2px rgb(58, 22, 104);
+  border: solid 2px rgb(185, 81, 177);
 }
 
 .input {
@@ -41,7 +41,7 @@
   margin-left: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .form {
     width: 600px;
     margin-top: 10px;

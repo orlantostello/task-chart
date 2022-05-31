@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import s from './FormChart.module.css';
-import ChartStatistic from '../Chart/ChartStatistic';
-
-const inputTypeRadio = [
-  { id: 1, title: 'Bar Chart', value: 'bar' },
-  { id: 2, title: 'Line Chart', value: 'line' },
-  { id: 3, title: 'Pie Chart', value: 'pie' },
-  { id: 4, title: 'Doughnut Chart', value: 'doughnut' },
-];
+import ChartStatistic from '../../components/Chart/ChartStatistic';
+import inputDataTypeRadio from '../../utils/inputDataTypeRadio';
 
 export default function FormChart() {
   const [xlabels, setXlabels] = useState([]);
@@ -69,8 +63,23 @@ export default function FormChart() {
           ></input>
         </label>
         <ul>
-          {inputTypeRadio.map(({ title, value, id }) => {
-            return (
+          {inputDataTypeRadio.map(({ title, value, id }) => {
+            return value === 'bar' ? (
+              <li key={id} className={s.item}>
+                <input
+                  type="radio"
+                  id={value}
+                  name="chart"
+                  value={value}
+                  defaultChecked
+                  className={s.inputradio}
+                  onChange={handleChangeR}
+                />
+                <label htmlFor={value} className={s.itemtext}>
+                  {title}
+                </label>
+              </li>
+            ) : (
               <li key={id} className={s.item}>
                 <input
                   type="radio"
